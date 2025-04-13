@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Navbar from "@/components/Navbar/Navbar"
-import Hero from "@/components/Hero/Hero"
-import About from "@/components/About/About"
-import Shows from "@/components/Shows/Shows"
-import Gallery from "@/components/Gallery/Gallery"
-import Footer from "@/components/Footer/Footer"
-import Layout from "@/components/Layout/Layout"
+import Hero from "../Components/Hero/Hero"
+import About from "../Components/About/About"
+import Shows from "../Components/Shows/Shows"
+import Gallery from "../Components/Gallery/Gallery"
+import Footer from "../Components/Footer/Footer"
+import Layout from "../Components/Layout/Layout"
 
 export default function Home() {
     return (
