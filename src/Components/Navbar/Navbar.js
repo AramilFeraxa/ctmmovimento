@@ -44,8 +44,14 @@ export default function Navbar() {
                 </Link>
             </Container>
 
-            <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
-                ☰
+            <button
+                className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
+                onClick={toggleMenu}
+                aria-label="Menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <Container>
                 <div className={`${styles.links} ${menuOpen ? styles.menuOpen : ''}`}>
