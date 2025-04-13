@@ -2,7 +2,7 @@
   "name": "ctmmovimento",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aramilferaxa.github.io/ctmmovimento/",
+  "homepage": "https://aramilferaxa.github.io/ctmmovimento",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
