@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 3rem 2rem;
+    background-color: var(--navy);
+    text-align: center;
+}
+
+.container {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 600px;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}

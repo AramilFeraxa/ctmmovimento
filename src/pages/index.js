@@ -2,7 +2,7 @@ import Hero from "../Components/Hero/Hero"
 import About from "../Components/About/About"
 import Shows from "../Components/Shows/Shows"
 import Gallery from "../Components/Gallery/Gallery"
-import Footer from "../Components/Footer/Footer"
+import TicketsInfo from "../Components/TicketsInfo/TicketsInfo"
 import Layout from "../Components/Layout/Layout"
 
 export default function Home() {
@@ -11,11 +11,7 @@ export default function Home() {
             <Hero />
             <About />
             <Shows />
-            <div style={{ background: 'var(--burgundy)', height: '250px' }}>
-                <p style={{ color: 'white', textAlign: 'center', paddingTop: '100px' }}>
-                    tu będzie coś
-                </p>
-            </div>
+            <TicketsInfo />
             <Gallery />
         </Layout>
     )

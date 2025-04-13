@@ -4,6 +4,14 @@
     text-align: center;
 }
 
+.shows h1 {
+    font-size: 2.5rem;
+    color: var(--navy);
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -12,10 +20,17 @@
     margin-top: 2rem;
 }
 
+.grid h3 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    font-family: var(--font-heading);
+    margin-block-end: 0;
+}
+
 .card {
     background: #fff;
     border: 1px solid #ddd;
-    border-left: 4px solid var(--burgundy);
+    border-left: 4px solid var(--navy);
     padding: 1.5rem;
     max-width: 300px;
     border-radius: 8px;
@@ -25,4 +40,19 @@
 
 .card:hover {
     transform: translateY(-4px);
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.category {
+    font-size: 0.9rem;
+    color: var(--yellow);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-style: italic;
 }

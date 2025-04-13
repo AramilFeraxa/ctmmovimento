@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     overflow: hidden;
 }
@@ -19,9 +19,9 @@
     background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-top: 10rem;
 }
 
 .text {
@@ -36,10 +36,16 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     font-family: var(--font-heading);
-    color: var(--burgundy);
+    color: var(--white);
 }
 
 .text p {
     font-size: 1.2rem;
-    color: var(--white);
+    color: var(--navy);
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 0 auto;
 }

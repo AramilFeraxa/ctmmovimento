@@ -1,10 +1,8 @@
 :root {
   --white: #fff;
-  /* delikatny biały jako główne tło */
   --black: #111111;
-  /* lekko złagodzony czarny dla lepszej czytelności */
-  --burgundy: #800020;
-  /* bordowy */
+  --navy: #003366;
+  --yellow: #cc9900;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Open Sans', sans-serif;
 }
@@ -19,14 +17,14 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--burgundy);
+  color: var(--navy);
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-heading);
-  color: var(--burgundy);
+  color: var(--navy);
 }
 
 .main-layout {
@@ -34,7 +32,6 @@ h3 {
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
-  overflow: hidden;
 }
 
 .spinner-container {
@@ -70,7 +67,7 @@ h3 {
   height: 100%;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: var(--thm-gray);
+  border-top-color: var(--black);
   animation: spin 1s infinite linear;
 }
 
@@ -116,4 +113,34 @@ h3 {
     margin-left: 10%;
     margin-right: 10%;
   }
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--navy);
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+.button-yellow {
+  background-color: var(--yellow);
+  color: var(--black);
+  border: 2px solid var(--yellow);
+}
+
+.button-yellow:hover {
+  background-color: var(--white);
+  color: var(--yellow);
 }
