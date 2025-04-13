@@ -1,0 +1,26 @@
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--burgundy);
+}
+
+.socials {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.socials :global(svg) {
+    font-size: 1.5rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.socials :global(svg):hover {
+    opacity: 1;
+    transform: scale(1.2);
+}

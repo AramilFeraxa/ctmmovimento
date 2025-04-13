@@ -1,0 +1,35 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--black);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--burgundy);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    transform: rotate(90deg);
+    margin-left: 1rem;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.links a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--burgundy);
+}

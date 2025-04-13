@@ -1,0 +1,30 @@
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/main.jpeg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    color: var(--white);
+}
+
+.text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    color: var(--burgundy);
+}
+
+.text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1em;
+}
+
+.text p {
+    font-size: 1.2rem;
+    color: var(--white);
+}

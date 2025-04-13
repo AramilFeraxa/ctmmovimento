@@ -1,0 +1,19 @@
+.gallery {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.item {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
