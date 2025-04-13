@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/ctmmovimento',
+    output: 'export',
     assetPrefix: '.',
     compiler: {
         styledComponents: true
@@ -10,7 +10,6 @@ const nextConfig = {
     },
     reactStrictMode: true,
     trailingSlash: true,
-    output: 'export',
 };
 
 export default nextConfig;
