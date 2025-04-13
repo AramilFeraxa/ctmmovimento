@@ -4,7 +4,6 @@
     width: 100%;
     z-index: 999;
     background-color: var(--black);
-    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,14 +13,13 @@
 
 .scrolled {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-    padding: 0 3rem;
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
     width: auto;
     transform: rotate(90deg);
-    margin-left: 1rem;
+    margin: 0;
 }
 
 .links {
@@ -56,7 +54,6 @@
     border-radius: 1px;
 }
 
-/* ===== HAMBURGER ===== */
 .hamburger {
     display: none;
     background: none;
@@ -64,7 +61,8 @@
     font-size: 2rem;
     color: var(--white);
     cursor: pointer;
-    margin-right: 2rem;
+    margin: 0;
+    margin-left: auto;
 }
 
 /* ===== MOBILE MENU ===== */
@@ -83,7 +81,7 @@
         background-color: var(--black);
         gap: 1rem;
         padding: 0;
-        margin-right: 0;
+        margin: 0;
 
         transform: scaleY(0);
         transform-origin: top;
