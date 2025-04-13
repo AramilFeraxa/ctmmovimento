@@ -14,7 +14,7 @@ export default function Footer() {
                     <i className="fa-brands fa-instagram" />
                 </Link>
                 <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-twitter" />
+                    <i className="fa-brands fa-tiktok" />
                 </Link>
             </div>
         </footer>
