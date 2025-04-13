@@ -16,6 +16,8 @@
     flex: 1;
     min-width: 280px;
     height: 300px;
-    background: url('/main.jpeg') center/cover;
     border-radius: 12px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
 }
