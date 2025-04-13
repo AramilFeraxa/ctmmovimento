@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from './Navbar.module.css'
-import movimentoWhite from '@images/movimento_white.png'
+import movimentoWhite from '@/images/movimento_white.png'
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)

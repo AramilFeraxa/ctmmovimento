@@ -4,10 +4,10 @@
       "@/*": [
         "./src/*"
       ],
-      "@components/*": [
+      "@/components/*": [
         "./src/Components/*"
       ],
-      "@images/*": [
+      "@/images/*": [
         "./src/assets/images/*"
       ],
     }

@@ -13,14 +13,14 @@
     gap: 1.5rem;
 }
 
-.socials :global(svg) {
+.socials i {
     font-size: 1.5rem;
     color: var(--white);
     opacity: 0.8;
     transition: all 0.3s ease;
 }
 
-.socials :global(svg):hover {
+.socials i:hover {
     opacity: 1;
     transform: scale(1.2);
 }
