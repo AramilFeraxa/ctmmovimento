@@ -1,5 +1,5 @@
 import '../app/globals.css'
-import '../lib/fontawesome'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 export default function App({ Component, pageProps }) {
     return <Component {...pageProps} />

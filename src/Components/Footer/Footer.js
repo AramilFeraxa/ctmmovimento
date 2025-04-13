@@ -1,5 +1,4 @@
 import styles from './Footer.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -9,13 +8,13 @@ export default function Footer() {
 
             <div className={styles.socials}>
                 <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                    <i className="fa-brands fa-facebook" />
                 </Link>
                 <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    <i className="fa-brands fa-instagram" />
                 </Link>
                 <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={['fab', 'tiktok']} />
+                    <i className="fa-brands fa-twitter" />
                 </Link>
             </div>
         </footer>
