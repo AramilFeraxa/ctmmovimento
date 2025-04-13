@@ -4,6 +4,7 @@ import { galleries } from '../../data/galleries'
 import styles from '../../Components/Gallery/GalleryPage.module.css'
 import exampleImage from '../../assets/images/example.jpg'
 import Layout from '@/Components/Layout/Layout'
+import { Container } from 'react-bootstrap'
 
 export default function GalleryPage({ gallery }) {
     const router = useRouter()
@@ -14,20 +15,22 @@ export default function GalleryPage({ gallery }) {
 
     return (
         <Layout>
-            <section className={styles.wrapper}>
-                <button className={`${styles.backButton} button`} onClick={() => router.push('/')}>
-                    <i className="fa-solid fa-arrow-left" /> Powrót
-                </button>
-                <p>Galeria zdjęć</p>
-                <h1>{gallery.title}</h1>
-                <div className={styles.grid}>
-                    {gallery.images.map((src, i) => (
-                        <div key={i} className={styles.imageWrapper}>
-                            <img src={src.src} alt={`Zdjęcie ${i + 1}`} />
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <Container>
+                <section className={styles.wrapper}>
+                    <button className={`${styles.backButton} button`} onClick={() => router.push('/')}>
+                        <i className="fa-solid fa-arrow-left" /> Powrót
+                    </button>
+                    <p>Galeria zdjęć</p>
+                    <h1>{gallery.title}</h1>
+                    <div className={styles.grid}>
+                        {gallery.images.map((src, i) => (
+                            <div key={i} className={styles.imageWrapper}>
+                                <img src={src.src} alt={`Zdjęcie ${i + 1}`} />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </Container>
         </Layout>
     )
 }
