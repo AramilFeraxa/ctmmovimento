@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import mainImage from '@/images/main.jpeg'
+import mainImage from '../../assets/images/main.jpeg'
 
 export default function Hero() {
     return (
