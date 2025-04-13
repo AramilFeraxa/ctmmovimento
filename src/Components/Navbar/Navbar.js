@@ -38,9 +38,11 @@ export default function Navbar() {
 
     return (
         <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-            <Link href='/' onClick={closeMenu}>
-                <img src={movimentoWhite.src} className={styles.logo} alt="Logo Movimento" />
-            </Link>
+            <Container>
+                <Link href='/' onClick={closeMenu}>
+                    <img src={movimentoWhite.src} className={styles.logo} alt="Logo Movimento" />
+                </Link>
+            </Container>
 
             <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">
                 ☰
