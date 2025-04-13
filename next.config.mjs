@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     basePath: '/ctmmovimento',
-    assetPrefix: '/ctmmovimento/',
+    assetPrefix: '.',
     compiler: {
         styledComponents: true
     },
