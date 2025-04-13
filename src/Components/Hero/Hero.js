@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import mainImage from '../../assets/images/main.jpeg'
+import mainImage from '../../assets/images/zakonnica.jpg'
 
 export default function Hero() {
     return (
@@ -8,7 +8,7 @@ export default function Hero() {
             <div className={styles.overlay}>
                 <div className={styles.text}>
                     <h1>Czechowicki Teatr Muzyczny Movimento</h1>
-                    <p>Pasja. Muzyka. Teatr.</p>
+                    <p>Muzyka. Sztuka. Pasja.</p>
                 </div>
             </div>
         </section>

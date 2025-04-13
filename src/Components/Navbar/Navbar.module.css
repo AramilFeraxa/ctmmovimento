@@ -1,15 +1,20 @@
 .nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 999;
     background-color: var(--black);
-    padding: 0 1rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--burgundy);
+    border-bottom: 1px solid var(--navy);
+}
+
+.scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    padding: 0 3rem;
 }
 
 .logo {
@@ -22,18 +27,36 @@
 .links {
     display: flex;
     gap: 1rem;
-    margin-right: 2rem;
+    will-change: transform, opacity;
 }
 
 .links a {
     color: var(--white);
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 0.25rem;
 }
 
 .links a:hover {
-    color: var(--burgundy);
+    color: var(--navy);
 }
 
+.active {
+    color: var(--navy);
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--navy);
+    border-radius: 1px;
+}
+
+/* ===== HAMBURGER ===== */
 .hamburger {
     display: none;
     background: none;
@@ -41,6 +64,7 @@
     font-size: 2rem;
     color: var(--white);
     cursor: pointer;
+    margin-right: 2rem;
 }
 
 /* ===== MOBILE MENU ===== */
@@ -64,8 +88,8 @@
         transform: scaleY(0);
         transform-origin: top;
         opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
         pointer-events: none;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .menuOpen {
