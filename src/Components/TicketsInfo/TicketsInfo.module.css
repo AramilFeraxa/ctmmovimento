@@ -1,6 +1,7 @@
 .wrapper {
     padding: 3rem 2rem;
-    background-color: var(--navy);
+    text-align: center;
+    background: linear-gradient(180deg, #003366 0%, #002244 100%);
     text-align: center;
 }
 

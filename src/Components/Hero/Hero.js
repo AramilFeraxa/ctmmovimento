@@ -8,7 +8,7 @@ export default function Hero() {
             <div className={styles.overlay}>
                 <div className={styles.text}>
                     <h1>Czechowicki Teatr Muzyczny Movimento</h1>
-                    <p>Muzyka. Sztuka. Pasja.</p>
+                    <p>Muzyka – Sztuka – Pasja</p>
                 </div>
             </div>
         </section>

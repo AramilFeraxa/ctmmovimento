@@ -1,7 +1,7 @@
 .about {
     display: flex;
     flex-wrap: wrap;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     background-color: var(--white);
     align-items: center;
     gap: 2rem;
