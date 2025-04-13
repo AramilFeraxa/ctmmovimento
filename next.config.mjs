@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'export',
+    assetPrefix: '/ctmmovimento/',
+    basePath: '/ctmmovimento',
     compiler: {
         styledComponents: true
     },
