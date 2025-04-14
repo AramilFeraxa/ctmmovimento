@@ -1,0 +1,73 @@
+.wrapper {
+    background: linear-gradient(to bottom, #111111, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+    background-image: url('/images/noise-texture.png');
+    background-size: cover;
+}
+
+.inner {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 600px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image {
+    margin-bottom: 1rem;
+    filter: grayscale(100%) brightness(1.2);
+}
+
+.inner h1 {
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+}
+
+.inner h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    color: var(--white);
+}
+
+.inner p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--yellow);
+}

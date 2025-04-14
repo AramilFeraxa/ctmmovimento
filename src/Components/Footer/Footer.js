@@ -13,7 +13,7 @@ export default function Footer() {
                 <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-instagram" />
                 </Link>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-tiktok" />
                 </Link>
             </div>

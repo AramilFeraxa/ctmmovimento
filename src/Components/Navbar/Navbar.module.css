@@ -26,6 +26,8 @@
     display: flex;
     gap: 1rem;
     will-change: transform, opacity;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .links a {
@@ -94,7 +96,8 @@
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        margin-right: -20px;
+        margin-right: 5%;
+        margin-left: 10%;
     }
 
     .links {

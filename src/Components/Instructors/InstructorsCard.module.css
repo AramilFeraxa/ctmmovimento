@@ -1,0 +1,73 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.role {
+    font-weight: bold;
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+    margin-block-start: 0;
+}
+
+.bio {
+    font-size: 1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+
+    .card,
+    .reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .info {
+        min-width: unset;
+    }
+
+    .photo {
+        max-width: 100%;
+        width: 100%;
+    }
+}
