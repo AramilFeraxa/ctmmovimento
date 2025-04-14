@@ -38,11 +38,11 @@ export default function Navbar() {
 
     return (
         <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-            <Container>
+            <div style={{ marginLeft: '10%', marginRight: '10%' }}>
                 <Link href='/' onClick={closeMenu}>
                     <img src={movimentoWhite.src} className={styles.logo} alt="Logo Movimento" />
                 </Link>
-            </Container>
+            </div>
 
             <button
                 className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
@@ -53,13 +53,12 @@ export default function Navbar() {
                 <span></span>
                 <span></span>
             </button>
-            <Container>
-                <div className={`${styles.links} ${menuOpen ? styles.menuOpen : ''}`}>
-                    <Link href="/" className={isActive('/')} onClick={closeMenu}>Strona Główna</Link>
-                    <Link href="/galeria" className={isActive('/galeria')} onClick={closeMenu}>Galeria</Link>
-                    <Link href="/o-nas" className={isActive('/o-nas')} onClick={closeMenu}>O nas</Link>
-                </div>
-            </Container>
+            <div className={`${styles.links} ${menuOpen ? styles.menuOpen : ''}`}>
+                <Link href="/" className={isActive('/')} onClick={closeMenu}>Strona Główna</Link>
+                <Link href="/o-nas" className={isActive('/o-nas')} onClick={closeMenu}>O nas</Link>
+                <Link href="/instruktorzy" className={isActive('/instruktorzy')} onClick={closeMenu}>Instruktorzy</Link>
+                <Link href="/galeria" className={isActive('/galeria')} onClick={closeMenu}>Galeria</Link>
+            </div>
         </nav>
     )
 }

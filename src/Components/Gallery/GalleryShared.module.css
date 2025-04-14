@@ -1,0 +1,62 @@
+.gallery {
+    padding: 2rem 1rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-block-end: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.title {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+}
+
+.type {
+    font-size: 0.9rem;
+    color: var(--yellow);
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+}

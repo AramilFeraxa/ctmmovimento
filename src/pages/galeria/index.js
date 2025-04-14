@@ -1,11 +1,11 @@
-import Gallery from "../../Components/Gallery/Gallery"
+import Gallery from "../../Components/Gallery/GalleryGrid"
 import Layout from "../../Components/Layout/Layout"
-import Hero from "../../Components/Hero/Hero"
+import PageHeader from "@/Components/PageHeader/PageHeader"
 
 export default function Home() {
     return (
         <Layout>
-            <Hero />
+            <PageHeader title="Galeria" />
             <Gallery />
         </Layout>
     )
