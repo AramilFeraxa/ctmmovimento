@@ -12,22 +12,6 @@
     margin-top: 2rem;
 }
 
-.button {
-    display: inline-block;
-    background-color: var(--yellow);
-    color: var(--black);
-    padding: 0.8rem 2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: var(--white);
-    color: var(--yellow);
-}
-
 .sliderWrapper {
     position: relative;
     padding: 0 3rem;
