@@ -67,7 +67,7 @@ export default function GallerySlider() {
                 </div>
 
                 <div className={layout.buttonWrapper}>
-                    <Link href="/galeria" className={layout.button}>
+                    <Link href="/galeria" className="button button-yellow">
                         Zobacz wszystkie
                     </Link>
                 </div>
