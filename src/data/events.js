@@ -26,7 +26,7 @@ export const events = [
     },
     {
         title: 'Koncert muzyki filmowej',
-        date: '2025-05-25',
+        date: '2025-03-16',
         desc: 'Niezapomniane melodie z ulubionych filmów.',
         poster: plakatKoncert.src,
         category: 'koncert',

@@ -17,7 +17,8 @@
     z-index: 0;
 }
 
-.eventsList {
+.eventsList,
+.singleEvent {
     font-size: 0.6rem;
     color: var(--navy);
     margin-top: 0.4rem;
@@ -27,6 +28,11 @@
     list-style: disc;
     display: block;
     position: relative;
+}
+
+.singleEvent {
+    padding-left: 0;
+    color: var(--black);
 }
 
 .marked {
@@ -46,7 +52,6 @@
     position: relative;
     z-index: 1;
     overflow: visible;
-    font-weight: bold;
 }
 
 .events {
@@ -104,4 +109,54 @@
     text-align: center;
     color: #666;
     font-style: italic;
+}
+
+.dayMarker {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    display: none;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1rem;
+    }
+
+    .calendar {
+        padding: 0.5rem;
+    }
+
+    .events {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .eventsList {
+        font-size: auto;
+    }
+
+    .marked {
+        font-size: 0.85rem;
+        padding: 0.25rem;
+    }
+
+    .eventsList,
+    .singleEvent {
+        display: none;
+    }
+
+    .dot {
+        display: block;
+    }
 }
