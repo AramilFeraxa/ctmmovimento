@@ -9,13 +9,10 @@ export default function Instruktorzy() {
         <Layout>
             <PageHeader
                 title="Instruktorzy"
+                subtitle="Poznaj osoby, które stoją za rozwojem artystycznym naszych wykonawców."
             />
             <Container>
                 <section className={styles.wrapper}>
-                    <h1>Instruktorzy CTM Movimento</h1>
-                    <p className={styles.intro}>
-                        Poznaj osoby, które stoją za rozwojem artystycznym naszych wykonawców.
-                    </p>
                     <InstructorGrid />
                 </section>
             </Container>

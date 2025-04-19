@@ -1,0 +1,107 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.calendar {
+    width: 100% !important;
+    background-color: var(--white);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+}
+
+.eventsList {
+    font-size: 0.6rem;
+    color: var(--navy);
+    margin-top: 0.4rem;
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 1rem;
+    list-style: disc;
+    display: block;
+    position: relative;
+}
+
+.marked {
+    background: var(--yellow) !important;
+    color: var(--black) !important;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    font-weight: bold;
+}
+
+.marked ul li {
+    background: var(--yellow) !important;
+    color: var(--black) !important;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    font-weight: bold;
+}
+
+.events {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.event {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+}
+
+.poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category {
+    font-size: 0.9rem;
+    color: var(--yellow);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.event h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.4rem;
+}
+
+.type {
+    font-style: italic;
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.noEvents {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}

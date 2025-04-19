@@ -1,45 +1,61 @@
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from './Navbar.module.css'
 import movimentoWhite from '../../assets/images/movimento_White.png'
-import { Container } from 'react-bootstrap'
+import { navigationLinks } from '../../data/navbar'
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null)
+    const [isMobile, setIsMobile] = useState(false)
+    const navRef = useRef(null)
+    const router = useRouter()
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50)
-        }
-
+        const handleScroll = () => setScrolled(window.scrollY > 50)
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen)
-    }
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768)
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (!navRef.current?.contains(e.target)) {
+                setMenuOpen(false)
+                setOpenSubmenuIndex(null)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
+
+    const toggleMenu = () => setMenuOpen((prev) => !prev)
     const closeMenu = () => {
         setMenuOpen(false)
+        setOpenSubmenuIndex(null)
     }
 
-    const isActive = (path) => {
-        const router = useRouter()
-        if (path === '/') {
-            console.log(router.pathname)
-            return router.pathname === path ? styles.active : ''
-        }
-
-        return router.pathname.startsWith(path) ? styles.active : ''
-    }
+    const isActive = (path) =>
+        path === '/'
+            ? router.pathname === '/'
+                ? styles.active
+                : ''
+            : router.pathname.startsWith(path)
+                ? styles.active
+                : ''
 
     return (
-        <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+        <nav ref={navRef} className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
             <div style={{ marginLeft: '10%', marginRight: '10%' }}>
-                <Link href='/' onClick={closeMenu}>
+                <Link href="/" onClick={closeMenu}>
                     <img src={movimentoWhite.src} className={styles.logo} alt="Logo Movimento" />
                 </Link>
             </div>
@@ -53,11 +69,57 @@ export default function Navbar() {
                 <span></span>
                 <span></span>
             </button>
+
             <div className={`${styles.links} ${menuOpen ? styles.menuOpen : ''}`}>
-                <Link href="/" className={isActive('/')} onClick={closeMenu}>Strona Główna</Link>
-                <Link href="/o-nas" className={isActive('/o-nas')} onClick={closeMenu}>O nas</Link>
-                <Link href="/instruktorzy" className={isActive('/instruktorzy')} onClick={closeMenu}>Instruktorzy</Link>
-                <Link href="/galeria" className={isActive('/galeria')} onClick={closeMenu}>Galeria</Link>
+                {navigationLinks.map((link, i) => {
+                    const isOpen = openSubmenuIndex === i
+                    const hasSubitems = !!link.subitems
+
+                    return (
+                        <div
+                            key={i}
+                            className={`${styles.linkGroup} ${isMobile && isOpen ? styles.menuOpen : ''}`}
+                        >
+                            <div className={styles.linkWithArrow}>
+                                <Link
+                                    href={link.href}
+                                    className={`${styles.link} ${isActive(link.href)}`}
+                                    onClick={closeMenu}
+                                >
+                                    {link.label}
+                                </Link>
+                                {hasSubitems && isMobile && (
+                                    <button
+                                        type="button"
+                                        className={`${styles.arrowButton} ${isOpen ? styles.open : ''}`}
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            e.stopPropagation()
+                                            setOpenSubmenuIndex(isOpen ? null : i)
+                                        }}
+                                    >
+                                        ▼
+                                    </button>
+                                )}
+                            </div>
+
+                            {hasSubitems && (
+                                <div className={styles.submenu}>
+                                    {link.subitems.map((sub, j) => (
+                                        <Link
+                                            key={j}
+                                            href={sub.href}
+                                            className={styles.subLink}
+                                            onClick={closeMenu}
+                                        >
+                                            {sub.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    )
+                })}
             </div>
         </nav>
     )
