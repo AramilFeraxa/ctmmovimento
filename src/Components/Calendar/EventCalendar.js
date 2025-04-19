@@ -18,13 +18,23 @@ export default function EventCalendar({ events }) {
             const dayEvents = events.filter(
                 e => new Date(e.date).toDateString() === date.toDateString()
             )
-            if (dayEvents.length > 0) {
+            if (dayEvents.length === 1) {
                 return (
-                    <ul className={styles.eventsList}>
-                        {dayEvents.map((e, i) => (
-                            <li key={i}>{e.title}</li>
-                        ))}
-                    </ul>
+                    <div className={styles.dayMarker}>
+                        <span className={styles.singleEvent}>{dayEvents[0].title}</span>
+                        <span className={styles.dot}>📍</span>
+                    </div>
+                )
+            } else if (dayEvents.length > 1) {
+                return (
+                    <div className={styles.dayMarker}>
+                        <ul className={styles.eventsList}>
+                            {dayEvents.map((e, i) => (
+                                <li key={i}>{e.title}</li>
+                            ))}
+                        </ul>
+                        <span className={styles.dot}>📍</span>
+                    </div>
                 )
             }
         }
