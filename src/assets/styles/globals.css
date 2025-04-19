@@ -153,3 +153,22 @@ h3 {
   background-color: var(--white);
   color: var(--yellow);
 }
+
+.react-calendar__tile {
+  height: 100px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.react-calendar__tile--now {
+  background: rgba(0, 51, 102, 0.3) !important;
+}
+
+.react-calendar__tile--active {
+  background: var(--navy) !important;
+}

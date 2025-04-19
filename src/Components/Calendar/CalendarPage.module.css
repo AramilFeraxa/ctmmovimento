@@ -1,0 +1,38 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.switcher {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.switcher button {
+    padding: 0.6rem 1.5rem;
+    background: transparent;
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.switcher button:hover,
+.switcher button.active {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+@media (max-width: 600px) {
+    .switcher button {
+        width: 100%;
+        text-align: center;
+    }
+}
