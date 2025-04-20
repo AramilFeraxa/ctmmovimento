@@ -19,7 +19,7 @@ export default function About() {
                         W skład zespołu wchodzi około 40 osób w wieku od 10 do 24 lat, którzy regularnie występują w spektaklach musicalowych, operowych, operetkowych oraz koncertach o szerokim repertuarze. Wśród realizowanych produkcji znajdują się takie tytuły jak „Stabat Mater” G. B. Pergolesiego, „Pasja Janowa” G. F. Haendla, „West Side Story” L. Bernsteina, „My Fair Lady” A. J. Lernera, „Kiss Me, Kate” Cole’a Portera czy „Bastien i Bastienne” W. A. Mozarta.
                     </p>
                     <p>
-                        Celem Teatru jest nie tylko rozwój artystyczny jego członków, ale także przygotowanie ich do studiów artystycznych — wokalnych i aktorskich. Wielu absolwentów „Movimento” z powodzeniem kontynuuje karierę na scenach zawodowych teatrów dramatycznych i muzycznych w Polsce oraz za granicą, a także w produkcjach telewizyjnych.
+                        Celem Teatru jest nie tylko rozwój artystyczny jego członków, ale także przygotowanie ich do studiów artystycznych — wokalnych i aktorskich. Wielu członków „Movimento” odnosi sukcesy w ogólnopolskich i międzynarodowych konkursach, a także z powodzeniem kontynuuje karierę na scenach zawodowych teatrów dramatycznych i muzycznych w Polsce i za granicą, a także w produkcjach telewizyjnych.
                     </p>
                 </section>
 
