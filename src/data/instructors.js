@@ -7,7 +7,7 @@ const instructors = [
         name: 'Barbara Bielaczyc',
         role: 'Sopran - śpiew, aktorstwo',
         photo: basia.src,
-        bio: 'Barbara Bielaczyc ukończyła Akademię Muzyczną w Katowicach, gdzie studiowała śpiew solowy. Poza działalnością artystyczną pracowała jako wykładowca na kilku uczelniach, a także publikowała prace z zakresu muzyki i antropologii kultury. Z czasem skupiła się wyłącznie na działalności artystycznej w Czechowicach-Dziedzicach. W 2005 roku założyła Czechowicki Teatr Muzyczny Movimento, organizując spektakle i koncerty, w tym musicalowe, operowe i dramatyczne. Reżyserowała m.in. "West Side Story", "My Fair Lady" i "Skrzypka na dachu", a także organizowała koncerty charytatywne oraz umuzykalniające dla dzieci i młodzieży. Angażuje się również w poezję, współorganizując festiwale i wydarzenia literackie. Jej uczniowie odnoszą sukcesy w ogólnopolskich i międzynarodowych konkursach, a wielu z nich kontynuuje karierę artystyczną na uczelniach muzycznych oraz na scenach teatralnych w Polsce i za granicą. Bielaczyc prowadzi kursy wokalne i warsztaty artystyczne, zapraszając znanych artystów do współpracy. Dzięki jej działalności powstało wiele festiwali muzyczno- teatralnych, takich jak Letni Festiwal Wokalno - Teatralny LEW i Jesienny Festiwal Muzyki Wokalnej Amo Cantare.',
+        bio: 'Barbara Bielaczyc ukończyła Akademię Muzyczną w Katowicach, gdzie studiowała śpiew solowy. Poza działalnością artystyczną pracowała jako wykładowca na kilku uczelniach, a także publikowała prace z zakresu muzyki i antropologii kultury. Z czasem skupiła się wyłącznie na działalności artystycznej w Czechowicach-Dziedzicach. W 2005 roku założyła Czechowicki Teatr Muzyczny Movimento, organizując spektakle i koncerty, w tym musicalowe, operowe i dramatyczne. Reżyserowała m.in. "West Side Story", "My Fair Lady" i "Skrzypka na dachu", a także organizowała koncerty charytatywne oraz umuzykalniające dla dzieci i młodzieży. Angażuje się również w poezję, współorganizując festiwale i wydarzenia literackie. Bielaczyc prowadzi kursy wokalne i warsztaty artystyczne, zapraszając znanych artystów do współpracy. Dzięki jej działalności powstało wiele festiwali muzyczno- teatralnych, takich jak Letni Festiwal Wokalno - Teatralny LEW i Jesienny Festiwal Muzyki Wokalnej Amo Cantare.',
     },
     {
         name: 'prof. dr hab. Rafał Majzner',
@@ -19,13 +19,13 @@ const instructors = [
         name: 'Ewelina Stanclik-Najwer',
         role: 'Alt - śpiew, chór',
         photo: exampleImage.src,
-        bio: 'Ta pani uczy śpiewać.',
+        bio: 'Ewa Stanclik-Najwer jest wychowanką Czechowickiego Teatru Muzycznego Movimento. Prowadzi chór, grupę dziecięcą, a także akompaniuje. TBC...',
     },
     {
-        name: 'Natalia Firlej',
+        name: 'Natasza Firlej',
         role: 'Pianistka - akompaniament',
         photo: exampleImage.src,
-        bio: 'Ta pani akompaniuje',
+        bio: 'Natasza Firlej ukończyła Szkołę Muzyczną I oraz II stopnia w Winnicy na kierunkach fortepian oraz teoria muzyki, a także Kijowski Narodowy Uniwersytet Kultury i Sztuk Pięknych na kierunku dyrygentura chóralna. Wieloletni pedagog i akompaniator w szkołach muzycznych. Pracowała m.in. w Operze Bałtyckiej, występowała też m.in. na recitalach muzyki kameralnej koncertując w kraju i za granicą. Od 2011 roku mieszka w Bielsku-Białej, współpracując z Miejskim Domem Kultury w Bielsku-Białej, Teatrem Polskim w Bielsku-Białej oraz Miejskim Domem Kultury w Czechowicach-Dziedzicach.',
     },
 ]
 

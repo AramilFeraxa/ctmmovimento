@@ -23,7 +23,7 @@ export default function JoinUs() {
                                 Chcesz śpiewać w chórze? Niech cię słyszą w górze!<br />
                                 Ufaj naturze, daj się ponieść jej.<br />
                                 Jeśli w duszy nagle wszystko się układa w rytm,<br />
-                                nie egoistą i głośno podziel się tym!<br />
+                                nie bądź egoistą i głośno podziel się tym!<br />
                                 Niech twój głos wzniesie się do nieba,<br />
                                 pokaż głos – przecież to nie wstyd!<br />
                                 Pokaż moc, pokaż styl, pokaż głos!
