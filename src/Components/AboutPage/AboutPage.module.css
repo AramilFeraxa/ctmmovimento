@@ -1,0 +1,33 @@
+.wrapper {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.block {
+    background-color: #f4f6f8;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.thumb {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 2rem 0;
+    }
+}

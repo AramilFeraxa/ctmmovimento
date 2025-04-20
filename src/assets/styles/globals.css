@@ -117,12 +117,12 @@ h3 {
   }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .container {
     margin-left: 10%;
     margin-right: 10%;
   }
-}
+}*/
 
 .button {
   display: inline-block;

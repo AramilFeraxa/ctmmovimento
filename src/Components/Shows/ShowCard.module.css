@@ -41,3 +41,26 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+
+@media (max-width: 400px) {
+    .card {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .poster {
+        margin-bottom: 0.75rem;
+    }
+
+    .category {
+        font-size: 0.85rem;
+    }
+
+    .location {
+        font-size: 0.7rem;
+    }
+}

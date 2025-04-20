@@ -7,13 +7,13 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} CTM Movimento</p>
 
             <div className={styles.socials}>
-                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.facebook.com/TeatrMuzycznyMovimento" target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-facebook" />
                 </Link>
-                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.instagram.com/ctmmovimento/" target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-instagram" />
                 </Link>
-                <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.tiktok.com/@ctm.movimento" target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-tiktok" />
                 </Link>
             </div>
