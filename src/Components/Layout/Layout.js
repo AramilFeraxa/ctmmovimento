@@ -7,7 +7,11 @@ import { useRouter } from "next/router";
 
 const Layout = ({ children, seo }) => {
     const [loading, setLoading] = useState(true);
-    const { title: pageTitle, description } = seo;
+    const defaultSeo = {
+        title: "Czechowicki Teatr Muzyczny Movimento",
+        description: "Oficjalna strona Czechowickiego Teatru Muzycznego Movimento"
+    };
+    const { title: pageTitle, description } = seo || defaultSeo;
 
     const site = "https://aramilferaxa.github.io/ctmmovimento";
     const { pathname } = useRouter();
