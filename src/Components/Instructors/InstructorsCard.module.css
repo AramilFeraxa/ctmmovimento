@@ -3,11 +3,12 @@
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
-    background-color: #f9f9f9;
+    background-color: #f4f6f8;
     padding: 1.5rem;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
@@ -49,7 +50,6 @@
 
 .bio {
     font-size: 1rem;
-    color: #333;
 }
 
 @media (max-width: 992px) and (min-width: 769px) {

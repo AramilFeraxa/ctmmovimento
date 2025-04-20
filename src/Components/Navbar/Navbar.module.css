@@ -156,7 +156,7 @@
 }
 
 /* ===== MOBILE MENU ===== */
-@media (max-width: 768px) {
+@media (max-width: 1003px) {
     .hamburger {
         display: flex;
         margin-right: 5%;
