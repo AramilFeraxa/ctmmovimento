@@ -13,8 +13,12 @@ export default function GalleryPage({ gallery }) {
         return <p style={{ padding: '2rem' }}>Galeria nie została znaleziona.</p>
     }
 
+    const Seo = {
+        title: `Galeria - ${gallery.title} | Czechowicki Teatr Muzyczny Movimento`,
+        description: `Galeria zdjęć z wydarzenia ${gallery.title}`,
+    }
     return (
-        <Layout>
+        <Layout seo={Seo}>
             <Container>
                 <section className={styles.wrapper}>
                     <button className={`${styles.backButton} button`} onClick={() => router.push('/')}>

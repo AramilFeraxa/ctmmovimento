@@ -4,8 +4,13 @@ import Layout from '../../Components/Layout/Layout'
 
 export default function Kalendarz() {
 
+    const Seo = {
+        title: 'Kalendarz - Archiwalne | Czechowicki Teatr Muzyczny Movimento',
+        description:
+            'Sprawdź archiwalne wydarzenia CTM Movimento',
+    }
     return (
-        <Layout>
+        <Layout seo={Seo}>
             <PageHeader
                 title="Kalendarz - Archiwalne"
                 subtitle="Sprawdź archiwalne wydarzenia CTM Movimento"
