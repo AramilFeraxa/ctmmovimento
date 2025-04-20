@@ -4,8 +4,13 @@ import Layout from '../../Components/Layout/Layout'
 import PageHeader from '../../Components/PageHeader/PageHeader'
 
 export default function JoinUs() {
+    const Seo = {
+        title: 'Dołącz do nas | Czechowicki Teatr Muzyczny Movimento',
+        description:
+            'Marzysz o scenie? Uwielbiasz śpiewać, tańczyć lub grać w teatrze? Dołącz do CTM Movimento!',
+    }
     return (
-        <Layout>
+        <Layout seo={Seo}>
             <PageHeader
                 title="Dołącz do nas!"
             />
