@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { navbarData } from "@/data/navbar";
 import logo from "../../assets/images/movimento_black.png";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -123,6 +123,19 @@ export default function Navbar() {
             </nav>
 
             <div className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}>
+                <div className={styles.mobileMenuHeader}>
+                    <Link href="/" className={styles.mobileLogo}>
+                        <Image src={logo} alt="CTM Movimento Logo" width={120} height={48} />
+                    </Link>
+                    <button
+                        className={styles.closeButton}
+                        onClick={() => setIsOpen(false)}
+                        aria-label="Close menu"
+                    >
+                        <FaTimes />
+                    </button>
+                </div>
+
                 <div className={styles.mobileMenuContent}>
                     <ul className={styles.mobileNavLinks}>
                         {navbarData?.map((item, index) => (
