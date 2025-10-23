@@ -1,17 +1,30 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import styles from './Preloader.module.css';
+import { FaTheaterMasks } from 'react-icons/fa';
 
 const LoadingIndicator = ({ loading }) => {
     return (
         <div
             style={{ opacity: loading ? 1 : 0, zIndex: loading ? 9999 : -1 }}
-            className="preloader"
+            className={styles.preloader}
         >
-            <Container className="text-center position-relative">
-                <div className="spinner-container">
-                    <div className="spinner"></div>
+            <div className={styles.content}>
+                <div className={styles.logoWrapper}>
+                    <div className={styles.spinnerOuter}></div>
+                    <div className={styles.spinnerMiddle}></div>
+                    <div className={styles.logoIcon}>
+                        <FaTheaterMasks />
+                    </div>
                 </div>
-            </Container>
+                <h2 className={styles.title}>
+                    CTM <span className={styles.accent}>Movimento</span>
+                </h2>
+                <div className={styles.dots}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     );
 };

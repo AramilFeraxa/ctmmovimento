@@ -7,8 +7,6 @@ export default (phase) => {
     */
     const nextConfig = {
         output: 'export',
-        assetPrefix: isDev ? undefined : '/ctmmovimento/',
-        basePath: isDev ? undefined : '/ctmmovimento',
         compiler: {
             styledComponents: true
         },

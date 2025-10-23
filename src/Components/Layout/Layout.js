@@ -13,7 +13,7 @@ const Layout = ({ children, seo }) => {
     };
     const { title: pageTitle, description } = seo || defaultSeo;
 
-    const site = "https://aramilferaxa.github.io/ctmmovimento";
+    const site = "https://ctmmovimento.pl";
     const { pathname } = useRouter();
     let canonicalPath = pathname.endsWith('/') ? pathname : pathname + '/';
 
@@ -34,11 +34,11 @@ const Layout = ({ children, seo }) => {
                 <title>{pageTitle}</title>
                 <meta name="description" content={description} />
                 <link rel="canonical" href={canonicalURL} />
-                <meta property="og:url" content="https://aramilferaxa.github.io/ctmmovimento" />
+                <meta property="og:url" content="https://ctmmovimento.pl" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Czechowicki Teatr Muzyczny Movimento - Muzyka | Sztuka | Pasja" />
                 <meta property="og:description" content="Oficjalna strona Czechowickiego Teatru Muzycznego Movimento" />
-                <meta property="og:image" content="https://aramilferaxa.github.io/ctmmovimento/opengraph.jpeg" />
+                <meta property="og:image" content="https://ctmmovimento.pl/opengraph.jpeg" />
             </Head>
             <Preloader loading={loading} />
             <main style={{ opacity: loading ? 0 : 1 }} className="main-layout">
