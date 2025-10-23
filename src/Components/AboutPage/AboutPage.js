@@ -32,8 +32,8 @@ export default function AboutPage() {
         },
         {
             icon: <FaMusic />,
-            number: "50+",
-            label: "Zrealizowanych spektakli",
+            number: "100+",
+            label: "Zagranych występów",
         },
         {
             icon: <FaTrophy />,
