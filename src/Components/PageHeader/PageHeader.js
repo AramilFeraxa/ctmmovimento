@@ -1,18 +1,25 @@
 import styles from './PageHeader.module.css'
-import defaultImage from '../../assets/images/headerImage.png'
+import { FaStar } from 'react-icons/fa'
 
 export default function PageHeader({ title, subtitle, backgroundImage }) {
     return (
-        <header className={styles.header}>
-            <img
-                src={backgroundImage?.src || defaultImage?.src}
-                className={styles.backgroundImage}
-                alt="Background"
-            />
-            <div className={styles.content}>
-                <h1>{title}</h1>
-                {subtitle && <p>{subtitle}</p>}
+        <section className={styles.hero}>
+            <div className={styles.heroOverlay}></div>
+            <div className={styles.container}>
+                <div className={styles.heroContent}>
+                    <span className={styles.badge}>
+                        <FaStar />
+                        {title}
+                    </span>
+                    <h1 className={styles.heroTitle}>
+                        Czechowicki Teatr Muzyczny
+                        <span className={styles.heroTitleAccent}> Movimento</span>
+                    </h1>
+                    <p className={styles.heroSubtitle}>
+                        {subtitle}
+                    </p>
+                </div>
             </div>
-        </header>
+        </section>
     )
 }
