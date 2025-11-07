@@ -19,6 +19,7 @@ export default function ShowCard({ show, index }) {
             musical: "var(--accent-yellow)",
             concert: "var(--info)",
             workshop: "var(--success)",
+            spectacle: "var(--warning)",
             default: "var(--primary-navy)",
         };
         return colors[category] || colors.default;
@@ -54,6 +55,7 @@ export default function ShowCard({ show, index }) {
                         {show.category === "musical" && "Musical"}
                         {show.category === "concert" && "Koncert"}
                         {show.category === "workshop" && "Warsztat"}
+                        {show.category === "spectacle" && "Spektakl"}
                     </div>
                 )}
             </div>
