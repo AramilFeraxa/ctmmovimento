@@ -19,6 +19,7 @@ import moja_zona_penelopa_1 from '../assets/images/plakaty/moja-zona-penelopa-1.
 import moja_zona_penelopa_2 from '../assets/images/plakaty/moja-zona-penelopa-2.jpg'
 import koncertMuzykiFilmowej from '../assets/images/plakaty/koncert-muzyki-filmowej.jpg'
 import zPieklaRodem from '../assets/images/plakaty/z-piekla-rodem.jpg'
+import zPieklaRodem2 from '../assets/images/plakaty/zPieklaRodem.webp'
 
 export const events = [
     {
@@ -291,9 +292,20 @@ export const events = [
         date: '2025-08-09',
         time: '16:00',
         location: 'MDK Czechowice-Dziedzice',
-        description: 'Mroczny musical o miłości i poświęceniu. Przenieś się w świat pełen emocji!',
+        description: 'Widowisko literacko-muzyczne. Przenieś się w świat pełen emocji!',
         image: zPieklaRodem.src,
         category: 'musical',
+        link: '/kalendarz',
+    },
+    {
+        id: 28,
+        title: 'Z piekła rodem',
+        date: '2025-11-09',
+        time: '15:30',
+        location: 'MDK Czechowice-Dziedzice',
+        description: 'Widowisko literacko-muzyczne. Przenieś się w świat pełen emocji!',
+        image: zPieklaRodem2.src,
+        category: 'spectacle',
         link: '/kalendarz',
     }
 ];
