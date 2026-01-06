@@ -20,6 +20,7 @@ import moja_zona_penelopa_2 from '../assets/images/plakaty/moja-zona-penelopa-2.
 import koncertMuzykiFilmowej from '../assets/images/plakaty/koncert-muzyki-filmowej.jpg'
 import zPieklaRodem from '../assets/images/plakaty/z-piekla-rodem.jpg'
 import zPieklaRodem2 from '../assets/images/plakaty/zPieklaRodem.webp'
+import charyt26 from '../assets/images/plakaty/charyt26.jpg'
 
 export const events = [
     {
@@ -306,6 +307,17 @@ export const events = [
         description: 'Widowisko literacko-muzyczne. Przenieś się w świat pełen emocji!',
         image: zPieklaRodem2.src,
         category: 'spectacle',
+        link: '/kalendarz',
+    },
+    {
+        id: 29,
+        title: 'Koncert charytatywny dla Wiktora i Ignasia',
+        date: '2026-01-04',
+        time: '15:00',
+        location: 'MDK Czechowice-Dziedzice',
+        description: 'Koncert charytatywny na rzecz Wiktora i Ignasia. Gościem specjalnym Jacek Stachurski.',
+        image: charyt26.src,
+        category: 'concert',
         link: '/kalendarz',
     }
 ];
