@@ -21,6 +21,7 @@ import koncertMuzykiFilmowej from '../assets/images/plakaty/koncert-muzyki-filmo
 import zPieklaRodem from '../assets/images/plakaty/z-piekla-rodem.jpg'
 import zPieklaRodem2 from '../assets/images/plakaty/zPieklaRodem.webp'
 import charyt26 from '../assets/images/plakaty/charyt26.jpg'
+import koncertSwiateczny from '../assets/images/plakaty/koncert-swiateczny-26.jpg'
 
 export const events = [
     {
@@ -317,6 +318,17 @@ export const events = [
         location: 'MDK Czechowice-Dziedzice',
         description: 'Koncert charytatywny na rzecz Wiktora i Ignasia. Gościem specjalnym Jacek Stachurski.',
         image: charyt26.src,
+        category: 'concert',
+        link: '/kalendarz',
+    },
+    {
+        id: 30,
+        title: 'Koncert świąteczny',
+        date: '2026-01-24',
+        time: '16:00',
+        location: 'MDK Czechowice-Dziedzice',
+        description: 'Świąteczny koncert, podczas którego CTM Movimento łączy siły z Chórem Moniuszko oraz Orkiestrą Skrzypcową Preludium!',
+        image: koncertSwiateczny.src,
         category: 'concert',
         link: '/kalendarz',
     }
