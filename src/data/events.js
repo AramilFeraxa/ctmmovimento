@@ -22,6 +22,7 @@ import zPieklaRodem from '../assets/images/plakaty/z-piekla-rodem.jpg'
 import zPieklaRodem2 from '../assets/images/plakaty/zPieklaRodem.webp'
 import charyt26 from '../assets/images/plakaty/charyt26.jpg'
 import koncertSwiateczny from '../assets/images/plakaty/koncert-swiateczny-26.jpg'
+import obywatelka from '../assets/images/plakaty/lata80.jpg'
 
 export const events = [
     {
@@ -331,5 +332,16 @@ export const events = [
         image: koncertSwiateczny.src,
         category: 'concert',
         link: '/kalendarz',
+    },
+    {
+        id: 31,
+        title: 'Obywatelka: Rozśpiewana',
+        date: '2026-03-08',
+        time: '16:00',
+        location: 'MDK Czechowice-Dziedzice',
+        description: 'Koncert z okazji dnia kobiet w klimacie lat 80.',
+        image: obywatelka.src,
+        category: 'concert',
+        link: 'https://biletyna.pl/koncert/Obywatelka-Piekna-i-Rozspiewana-Dzien-Kobiet-w-klimacie-lat-80',
     }
 ];

@@ -11,12 +11,12 @@ export default function TicketsInfo() {
                         <FaTicketAlt />
                     </div>
 
-                    <h2 className={styles.title}>Kup bilety na nasze spektakle</h2>
+                    <h2 className={styles.title}>Kup bilety na nasze wydarzenia</h2>
 
                     <p className={styles.description}>
                         Bilety na wszystkie nasze spektakle i wydarzenia są dostępne w serwisie{" "}
                         <strong>Biletyna.pl</strong>. Rezerwuj miejsca z wyprzedzeniem i ciesz się magią
-                        teatru muzycznego!
+                        doskonałym widokiem na scenę!
                     </p>
 
                     <div className={styles.buttons}>
