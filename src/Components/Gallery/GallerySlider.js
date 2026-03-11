@@ -31,13 +31,12 @@ export default function GallerySlider() {
                             Zobacz najlepsze momenty z naszych spektakli i wydarzeń
                         </p>
                     </div>
-                    <Link href="/#" className={styles.viewAllButton}>
+                    <Link href="/galeria" className={styles.viewAllButton}>
                         Pełna galeria
                         <FaArrowRight />
                     </Link>
                 </div>
 
-                {/*
                 <div className={styles.sliderWrapper}>
                     <Swiper
                         modules={[Navigation, Autoplay, EffectCoverflow, Pagination]}
@@ -131,7 +130,6 @@ export default function GallerySlider() {
                         <FaChevronRight />
                     </button>
                 </div>
-                */}
             </div>
 
             <div className={styles.decorations}>
