@@ -46,9 +46,9 @@ export const navbarData = [
             },
         ],
     },
-    /*{
+    {
         name: "Galeria",
         path: "/galeria",
         submenu: null,
-    },*/
+    },
 ];

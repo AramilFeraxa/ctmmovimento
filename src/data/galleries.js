@@ -1,7 +1,7 @@
 import exampleImage from '../assets/images/example.jpg'
 
 export const galleries = [
-    {
+    /*{
         slug: 'koncert-wiosenny',
         title: 'Majowy Bzik Miłosny',
         cover: exampleImage.src,
@@ -60,5 +60,13 @@ export const galleries = [
             exampleImage,
             exampleImage,
         ],
+    },*/
+    {
+        slug: 'lata80',
+        title: 'Obywatelka: Rozśpiewana',
+        date: '8 marca 2026',
+        type: 'galeria',
+        cover: '/images/gallery/lata80/image00009%204.jpeg',
+        folder: 'images/gallery/lata80',
     },
 ]
