@@ -48,19 +48,15 @@ export const galleries = [
             exampleImage,
             exampleImage,
         ],
-    },
-    {
-        slug: 'koncert-wiosenny',
-        title: 'Koncert Wiosenny',
-        date: '20 maja 2024',
-        type: 'koncert',
-        cover: exampleImage.src,
-        images: [
-            exampleImage,
-            exampleImage,
-            exampleImage,
-        ],
     },*/
+    {
+        slug: 'koncert-swiateczny-2026',
+        title: 'Koncert świąteczny',
+        date: '24 stycznia 2026',
+        type: 'galeria',
+        cover: '/images/gallery/koncert-swiateczny-2026/623224517_1369236358337382_2935135260497185909_n.jpg',
+        folder: 'images/gallery/koncert-swiateczny-2026',
+    },
     {
         slug: 'lata80',
         title: 'Obywatelka: Rozśpiewana',
