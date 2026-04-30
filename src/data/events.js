@@ -23,6 +23,7 @@ import zPieklaRodem2 from '../assets/images/plakaty/zPieklaRodem.webp'
 import charyt26 from '../assets/images/plakaty/charyt26.jpg'
 import koncertSwiateczny from '../assets/images/plakaty/koncert-swiateczny-26.jpg'
 import obywatelka from '../assets/images/plakaty/lata80.jpg'
+import bzik2026 from '../assets/images/plakaty/bzik2026.jpg'
 
 export const events = [
     {
@@ -343,5 +344,16 @@ export const events = [
         image: obywatelka.src,
         category: 'concert',
         link: 'https://biletyna.pl/koncert/Obywatelka-Piekna-i-Rozspiewana-Dzien-Kobiet-w-klimacie-lat-80',
+    },
+    {
+        id: 32,
+        title: 'Dawnej miłości czar',
+        date: '2026-05-10',
+        time: '15:00',
+        location: 'MDK Czechowice-Dziedzice',
+        description: 'Koncert w ramach Majowego Bziku Miłosnego 2026 w wykonaniu CTM Movimento.',
+        image: bzik2026.src,
+        category: 'concert',
+        link: 'https://biletyna.pl/event/view/id/658376',
     }
 ];
