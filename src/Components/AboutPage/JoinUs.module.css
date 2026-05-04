@@ -1,6 +1,6 @@
 .joinUs {
-    background: var(--neutral-white);
-    padding: var(--space-16) 0;
+    background: var(--neutral-white-soft);
+    padding: var(--space-12) 0;
 }
 
 .container {
@@ -141,32 +141,32 @@
 
 /* Section Titles */
 .sectionTitle {
-    font-size: var(--text-3xl);
-    font-weight: var(--font-extrabold);
-    color: var(--primary-navy);
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-regular);
+    color: var(--primary-black);
     text-align: center;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
+    font-style: italic;
 }
 
 @media (min-width: 768px) {
     .sectionTitle {
-        font-size: var(--text-4xl);
+        font-size: var(--text-3xl);
     }
 }
 
 .accent {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-crimson);
+    font-style: italic;
 }
 
 .sectionSubtitle {
-    font-size: var(--text-lg);
-    color: var(--neutral-gray-600);
+    font-size: var(--text-base);
+    color: var(--neutral-gray-500);
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto var(--space-12);
+    max-width: 600px;
+    margin: 0 auto var(--space-10);
     line-height: var(--leading-relaxed);
 }
 
@@ -491,40 +491,41 @@
 
 /* CTA Section */
 .ctaSection {
-    padding: var(--space-20) 0;
+    padding: var(--space-16) 0;
 }
 
 .ctaContent {
     text-align: center;
-    padding: var(--space-16);
-    background: var(--gradient-primary);
-    border-radius: var(--radius-3xl);
-    box-shadow: var(--shadow-2xl);
+    padding: var(--space-12);
+    background: var(--primary-black);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ctaIcon {
-    font-size: 64px;
-    color: var(--accent-yellow);
-    margin-bottom: var(--space-6);
+    font-size: 48px;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-5);
 }
 
 .ctaTitle {
-    font-size: var(--text-3xl);
-    font-weight: var(--font-extrabold);
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-regular);
     color: var(--neutral-white);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
+    font-style: italic;
 }
 
 @media (min-width: 768px) {
     .ctaTitle {
-        font-size: var(--text-4xl);
+        font-size: var(--text-3xl);
     }
 }
 
 .ctaText {
-    font-size: var(--text-lg);
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: var(--space-8);
+    font-size: var(--text-base);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-6);
 }
 
 .ctaButton {
@@ -532,21 +533,23 @@
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-4) var(--space-8);
-    background: var(--gradient-accent);
-    color: var(--primary-navy);
-    font-size: var(--text-lg);
-    font-weight: var(--font-bold);
-    border-radius: var(--radius-full);
+    background: var(--primary-crimson);
+    color: var(--neutral-white);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    border-radius: 0;
     transition: all var(--transition-base);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .ctaButton:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    background: var(--primary-crimson-dark);
+    transform: translateY(-2px);
 }
 
 .ctaButton svg {
-    font-size: 20px;
+    font-size: 14px;
     transition: transform var(--transition-base);
 }
 
