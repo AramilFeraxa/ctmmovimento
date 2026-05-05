@@ -73,7 +73,7 @@
 .title {
     font-size: var(--text-3xl);
     font-weight: var(--font-extrabold);
-    color: var(--neutral-white);
+    color: var(--primary-navy-dark);
     text-align: center;
     letter-spacing: 2px;
     animation: fadeInUp 1s ease-out;
@@ -86,7 +86,7 @@
 }
 
 .accent {
-    background: var(--gradient-accent);
+    background: var(--primary-navy-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

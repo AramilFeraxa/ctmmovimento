@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { navbarData } from "@/data/navbar";
-import logo from "../../assets/images/movimento_black.png";
+import logo from "../../assets/images/movimento_white.png";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {

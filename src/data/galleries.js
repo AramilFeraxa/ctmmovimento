@@ -62,7 +62,7 @@ export const galleries = [
         title: 'Obywatelka: Rozśpiewana',
         date: '8 marca 2026',
         type: 'galeria',
-        cover: '/images/gallery/lata80/image00009%204.jpeg',
+        cover: '/images/gallery/lata80/image00009 4.jpeg',
         folder: 'images/gallery/lata80',
     },
 ]
