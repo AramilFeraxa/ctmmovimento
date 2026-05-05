@@ -17,7 +17,7 @@ const LoadingIndicator = ({ loading }) => {
                     </div>
                 </div>
                 <h2 className={styles.title}>
-                    CTM <span className={styles.accent}>Movimento</span>
+                    CTM Movimento
                 </h2>
                 <div className={styles.dots}>
                     <span></span>

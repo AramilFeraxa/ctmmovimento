@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import logo from "../../assets/images/movimento_White.png";
+import logo from "../../assets/images/movimento_white.png";
 import {
     FaFacebookF,
     FaInstagram,
