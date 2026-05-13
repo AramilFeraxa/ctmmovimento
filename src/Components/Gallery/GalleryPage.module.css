@@ -201,6 +201,28 @@
     letter-spacing: 0.05em;
 }
 
+.lightboxDownloadBtn {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    z-index: 10001;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.lightboxDownloadBtn:hover {
+    background: rgba(255, 255, 255, 0.28);
+    color: #fff;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
     .masonry {
