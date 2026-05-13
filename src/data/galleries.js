@@ -65,4 +65,12 @@ export const galleries = [
         cover: '/images/gallery/lata80/image00009 4.jpeg',
         folder: 'images/gallery/lata80',
     },
+    {
+        slug: 'majowy-bzik-milosny-2026',
+        title: 'Dawnej miłości czar',
+        date: '10 maja 2026',
+        type: 'galeria',
+        cover: '/images/gallery/majowy-bzik-milosny-2026/IMG_2196.png',
+        folder: 'images/gallery/majowy-bzik-milosny-2026',
+    }
 ]

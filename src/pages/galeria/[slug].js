@@ -134,6 +134,14 @@ export default function GalleryPage({ gallery }) {
                         onClick={(e) => { e.stopPropagation(); nextImage() }}
                         aria-label="Następne"
                     >&#8250;</button>
+                    <a
+                        href={images[lightbox].src}
+                        download
+                        className={styles.lightboxDownloadBtn}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        Pobierz
+                    </a>
                     <div className={styles.lightboxCounter}>{lightbox + 1} / {total}</div>
                 </div>
             )}
@@ -159,6 +167,7 @@ export async function getStaticProps({ params }) {
         const path = require('path')
         const dir = path.join(process.cwd(), 'public', gallery.folder)
         const thumbDir = path.join(process.cwd(), 'public', 'thumbs', gallery.folder)
+        const maxBytes = 10 * 1024 * 1024
 
         try {
             const sharp = require('sharp')
@@ -167,19 +176,84 @@ export async function getStaticProps({ params }) {
 
             images = await Promise.all(files.map(async (filename) => {
                 const srcPath = path.join(dir, filename)
+                let sourcePathForUse = srcPath
+                let sourceUrlForUse = `/${gallery.folder}/${encodeURIComponent(filename)}`
+                const ext = path.extname(filename)
+                const lowerExt = ext.toLowerCase()
+                const baseName = path.basename(filename, ext)
                 const thumbFilename = filename.replace(/\s+/g, '_').replace(/\.(png|gif|webp)$/i, '.jpg')
                 const thumbPath = path.join(thumbDir, thumbFilename)
 
                 let isPortrait = false
                 try {
-                    const meta = await sharp(srcPath).metadata()
+                    const srcStat = fs.statSync(srcPath)
+                    const srcTooLarge = srcStat.size > maxBytes
+
+                    if (srcTooLarge) {
+                        const srcMeta = await sharp(srcPath).metadata()
+                        let width = srcMeta.width || 1
+                        let height = srcMeta.height || 1
+                        if ([5, 6, 7, 8].includes(srcMeta.orientation)) [width, height] = [height, width]
+                        const ratio = Math.sqrt(maxBytes / srcStat.size)
+                        let targetWidth = width
+                        let quality = 90
+                        const tempPath = path.join(dir, `${baseName}__tmp${ext}`)
+
+                        const writeScaled = async (outPath, outWidth, outQuality) => {
+                            let pipeline = sharp(srcPath, { animated: true })
+                                .rotate()
+                                .resize({ width: outWidth, withoutEnlargement: true })
+
+                            if (lowerExt === '.jpg' || lowerExt === '.jpeg') {
+                                pipeline = pipeline.jpeg({ quality: outQuality, mozjpeg: true })
+                            } else if (lowerExt === '.webp') {
+                                pipeline = pipeline.webp({ quality: outQuality })
+                            } else if (lowerExt === '.png') {
+                                pipeline = pipeline.png({ compressionLevel: 9, quality: Math.max(50, outQuality) })
+                            } else if (lowerExt === '.gif') {
+                                pipeline = pipeline.gif()
+                            }
+                            await pipeline.toFile(outPath)
+                        }
+
+                        await writeScaled(tempPath, targetWidth, quality)
+                        let resizedStat = fs.statSync(tempPath)
+
+                        // 1) Try reducing quality first (preserve dimensions).
+                        while (resizedStat.size > maxBytes && quality > 60) {
+                            quality = Math.max(60, quality - 5)
+                            await writeScaled(tempPath, targetWidth, quality)
+                            resizedStat = fs.statSync(tempPath)
+                        }
+
+                        // 2) If still too large, reduce dimensions gradually.
+                        let attempts = 0
+                        while (resizedStat.size > maxBytes && attempts < 10) {
+                            if (attempts === 0) {
+                                targetWidth = Math.max(1, Math.floor(width * Math.max(ratio, 0.9)))
+                            } else {
+                                targetWidth = Math.max(1, Math.floor(targetWidth * 0.95))
+                            }
+                            await writeScaled(tempPath, targetWidth, quality)
+                            resizedStat = fs.statSync(tempPath)
+                            attempts++
+                        }
+
+                        if (fs.existsSync(tempPath)) {
+                            fs.copyFileSync(tempPath, srcPath)
+                            fs.unlinkSync(tempPath)
+                        }
+                    }
+
+                    const meta = await sharp(sourcePathForUse).metadata()
                     let w = meta.width || 1
                     let h = meta.height || 1
                     if ([5, 6, 7, 8].includes(meta.orientation)) [w, h] = [h, w]
                     isPortrait = h > w
 
-                    if (!fs.existsSync(thumbPath)) {
-                        await sharp(srcPath)
+                    const thumbNeedsUpdate = !fs.existsSync(thumbPath) || fs.statSync(thumbPath).mtimeMs < fs.statSync(sourcePathForUse).mtimeMs
+                    if (thumbNeedsUpdate) {
+                        await sharp(sourcePathForUse)
                             .rotate()
                             .resize({ width: 400, withoutEnlargement: true })
                             .jpeg({ quality: 25 })
@@ -188,12 +262,12 @@ export async function getStaticProps({ params }) {
                 } catch (imgErr) {
                     console.warn(`Thumbnail error for ${filename}:`, imgErr.message)
                     if (!fs.existsSync(thumbPath)) {
-                        fs.copyFileSync(srcPath, thumbPath)
+                        fs.copyFileSync(sourcePathForUse, thumbPath)
                     }
                 }
 
                 return {
-                    src: `/${gallery.folder}/${encodeURIComponent(filename)}`,
+                    src: sourceUrlForUse,
                     thumb: `/thumbs/${gallery.folder}/${thumbFilename}`,
                     isPortrait,
                 }

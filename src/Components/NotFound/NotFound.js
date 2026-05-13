@@ -16,7 +16,7 @@ export default function NotFoundPage() {
 
                     <div className={styles.errorCode}>
                         <span>4</span>
-                        <span className={styles.mask}>0</span>
+                        <span>0</span>
                         <span>4</span>
                     </div>
 
